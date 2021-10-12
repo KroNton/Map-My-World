@@ -145,7 +145,7 @@
   </joint>
   
 
-  <link name="camera">
+  <link name="camera_link">
       <inertial>
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <mass value="0.1"/>
@@ -164,7 +164,7 @@
           <box size="0.05 0.05 0.05"/>
         </geometry>
       </collision>
-      <gazebo reference="camera">
+      <gazebo reference="camera_link">
           <material>Gazebo/Green</material>
       </gazebo>
   </link>
@@ -172,11 +172,18 @@
   <joint name="camera_joint" type="fixed">
     <origin xyz="0.2 0.0 0.0" rpy="0.0 0.0 0.0"/>
     <parent link="chassis"/>
-    <child link="camera"/>
+    <child link="camera_link"/>
     <axis xyz="0.0 1 0.0"/>
   </joint>
 
+  <joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+    <parent link="camera_link"/>
+    <child link="camera_link_optical"/>
+  </joint>
 
+  <link name="camera_link_optical">
+  </link>
 
   <link name="hokuyo">
       <inertial>
