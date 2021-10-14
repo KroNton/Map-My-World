@@ -3,8 +3,8 @@
 <launch>
 
   <!-- Robot pose -->
-  <arg name="x" default="5"/>
-  <arg name="y" default="5"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
@@ -17,7 +17,7 @@
 
 
   <!-- World File -->
-  <arg name="world_file" default="$(find chaser_robot)/worlds/kyrillos.world"/>
+  <arg name="world_file" default="$(find chaser_robot)/worlds/office.world"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
