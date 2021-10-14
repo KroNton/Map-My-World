@@ -36,9 +36,7 @@
 
       <!-- Loop Closure Detection -->
       <!-- 0=SURF 1=SIFT 2=ORB 3=FAST/FREAK 4=FAST/BRIEF 5=GFTT/FREAK 6=GFTT/BRIEF 7=BRISK 8=GFTT/ORB 9=KAZE -->
-      <param name="Kp/DetectorStrategy" type="string" value="3"/>
-      
-      <!--param name="Vis/FeatureType" type="string" value="1"/-->
+      <param name="Kp/DetectorStrategy" type="string" value="0"/>
 
       <!-- Maximum visual words per image (bag-of-words) -->
       <param name="Kp/MaxFeatures" type="string" value="400"/>
@@ -53,22 +51,8 @@
       <!-- Minimum visual inliers to accept loop closure -->
       <param name="Vis/MinInliers" type="string" value="15"/>
 
-      <!-- 0=Frame-to-Map (F2M) 1=Frame-to-Frame (F2F) -->
-      <param name="Odom/Strategy" value="1"/>
-
-      <!-- Correspondences: 0=Features Matching, 1=Optical Flow -->
-      <param name="Vis/CorType" value="1"/>
-
-      <!-- maximum features map size, default 2000 -->
-      <param name="OdomF2M/MaxSize" type="string" value="1000"/> 
-      <!-- maximum features extracted by image, default 1000 -->
-      <param name="Vis/MaxFeatures" type="string" value="600"/>
-
       <!-- Set to false to avoid saving data when robot is not moving -->
       <param name="Mem/NotLinkedNodesKept" type="string" value="false"/>
-
-      <param name="RGBD/OptimizeMaxError"                type="double"      value="0.1"  />
-
     </node>
   </group>
 </launch>
